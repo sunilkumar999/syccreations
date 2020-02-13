@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Syc Creations</title>
+ 
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+ 
+    <!-- Custom CSS -->
+    <link href="css/full-slider.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/hamburger.css">
+ 
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+ 
+    <script src="https://use.fontawesome.com/dffe4822f3.js"></script>
+
+    <!--Google Analytics tracker-->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-102422779-1', 'auto');
+          ga('send', 'pageview');
+        </script>
+    <!--Google Analytics tracker-->
+    <!-- Hamburger Menu -->
+    <!-- Hamburger CSS-->
+<!-- Hamburger Menu -->
+    <!-- Hamburger CSS-->
+          <style>
+.menu {
+  position: fixed;
+  top: 20%;
+  right: 0;
+  height: 88%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background: ;
+}
+.menu li a{
+    display:block;
+    height:4em;
+    width:3em;
+    text-indent:-200em;
+    line-height:4em;
+    text-align:center;
+    color: ;
+    background:transparent;
+    position: relative;
+    border-bottom: 1px solid transparent;
+    transition: background 0.3s ease-in-out;
+}
+.menu li a:before {
+  font-family: FontAwesome;
+  speak: none;
+  text-indent: 0em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 1.4em;
+}
+.menu li a.Home:before {
+  content: "\f015";
+}
+.menu li a.Team:before {
+  content: "\f0c0";
+}
+.menu li a.Projects:before {
+  content: "\f115";
+}
+.menu li a.Facebook:before {
+  content: "\f082";
+}
+.menu li a.Twitter:before {
+  content: "\f081";
+}
+.menu li a.Instagram:before {
+  content: "\f16d";
+}
+.menu li a.Youtube:before {
+  content: "\f166";
+}
+.menu li a.Contact:before {
+  content: "\f003";
+}
+
+.menu li a:hover{
+  background: #ff5c62;
+  color: #fff;
+}
+.menu li.current a {
+  background: #ff5e5e;
+  color: #fff;
+}
+.menu li a.active {
+  background: #ff5e5e;
+  color: #fff;
+}
+.menu li a.active:after{
+    position:absolute;
+    left:5em;
+    top:0;
+    content:"";
+    border:2.5em solid transparent;
+    border-left-color:#ff5c62;
+    border-width: 2.5em 0em
+}
+.menu li{
+    position:relative;
+}
+.menu li:after{
+    content: attr(title);
+    position:absolute;
+    left:3em;
+    top:0;
+    height:3em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-transform:uppercase;
+    background:white;
+    padding:1em;
+    transition: all 0.3s left-ease-in-out;
+    visibility:hidden;
+    opacity:0;
+}
+.menu li:hover:after{
+    visibility:visible;
+    opacity:1;
+}
+@media screen and (max-height: 20em){
+  .menu li{
+    font-size:70%;
+  }
+}
+          </style>
+    <!-- Hamburger CSS-->
+    <!-- Hamburger JS -->
+          <script>
+                  function menu() {
+                  var burger = document.querySelector('.hamburger');
+                  var navList = document.querySelector('.nav-list');
+                  
+                  burger.addEventListener('click', function(e) {
+                      e.preventDefault();
+                      burger.classList.toggle('menu--active');
+                      navList.classList.toggle('list__active');
+                  });
+                  }
+
+                  menu();
+          </script>
+  <!-- Hamburger JS -
+        <ul class="menu">
+          <li title="Home"><a href="index.html" class="Home">Home</a></li>
+          <li title="Team"><a href="teamnew.html" class="Team">Team</a></li>
+          <li title="Projects"><a href="#" class="Projects">Projects</a></li>
+          <li title="Facebook"><a href="https://www.facebook.com/ISUSycCreations/" target="_blank" class="Facebook">Facebook</a></li>
+          <li title="Twitter"><a href="http://twitter.com/SycCreations" target="_blank" class="Twitter">Twitter</a></li>
+          <li title="Youtube"><a href="https://www.youtube.com/channel/UCaBpvvk491F_O9-vPbUguuQ/featured" target="_blank" class="Youtube">Youtube</a></li>
+          <li title="Instagram"><a href="https://www.instagram.com/syccreations/" target="_blank" class="Instagram">Instagram</a></li>
+          <li title="Contact"><a href="contacts.html" class="Contact">Contact</a></li>
+        </ul>
+    
+    <!-- Hamburger Menu -->
+
+
+
+    <!-- SLIDESHOW CSS -->
+        <style>
+            * {
+                box-sizing:border-box
+            }
+
+            /* Slideshow container */
+            .slideshow-container {
+              padding-left: 10px;
+                padding-top: 5px;
+              max-width: 1080px;
+              position: relative;
+              margin: auto;
+            }
+            /* Hide the images by default */
+            .mySlides {
+              padding-left: 30px;
+                padding-top: 10px;
+                display: none;
+            }
+
+            /* Caption text */  
+
+            /* Fading animation */
+            .fade {
+              -webkit-animation-name: fade;
+              -webkit-animation-duration: 3.5s;
+              animation-name: fade;
+              animation-duration: 6.5s;
+            }
+
+            @-webkit-keyframes fade {
+              from {opacity: .4} 
+              to {opacity: 1}
+            }
+
+            @keyframes fade {
+              from {opacity: .4} 
+              to {opacity: 1}
+            }
+            .dot {
+              cursor: pointer;
+              height: 15px;
+              width: 15px;
+              margin: 0 2px;
+              background-color: #bbb;
+              border-radius: 50%;
+              display: inline-block;
+              transition: background-color 0.6s ease;
+            }
+
+            .active, .dot:hover {
+              background-color: #717171;
+            }
+        </style>
+    <!-- SLIDESHOW CSS -->
+
+    <!-- Cutom CSS -->
+      <style>
+      /* Create a Parallax Effect */
+      .bgimg-2, .bgimg-3 {
+          opacity: 0.7;
+          background-attachment: fixed;         
+          background-repeat: no-repeat;
+          background-size: cover;
+      }
+
+
+      /* First image (Logo. Full height)
+      .bgimg-1 {
+          background-position: center;
+          background-image: url("img/portfolios/Template.png");
+          margin-top: 40px;         
+          min-height: 100%;
+      } */
+
+      /* Second image (Portfolio) */
+      .bgimg-2 {
+          background-image: url("img/portfolios/Color Background.png");
+          min-height: 550px;
+      }
+
+      /* Third image (Contact) */
+      .bgimg-3 {
+          background-image: url("img/portfolios/Color Background.png");
+          min-height: 400px;
+      }
+      .w3-center{
+        text-align: center;
+          margin-left: 10px;
+          margin-right: 10px;         
+      }
+      .w3-wide {letter-spacing: 10px;
+                margin-left: 10px;
+          margin-right: 10px;}
+      .w3-hover-opacity {cursor: pointer;}
+
+      #googleMap {
+          width: 100%;
+          height: 400px;
+          -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+      }
+
+      /* Turn off parallax scrolling for tablets and mobiles */
+      @media only screen and (max-width: 1024px) {
+          .bgimg-1, .bgimg-2, .bgimg-3 {
+              background-attachment: scroll;
+          }
+      }
+
+      /* About Section */
+      #about {
+        margin-right: 10px;
+        margin-left: 10px;
+        font-size: 1.9em;
+      }
+
+      /* Heart Icon */
+      .heart-icon {
+        color: #f77;
+      }
+
+
+      /* Clearfix Hack */
+      .cf:before,
+      .cf:after {
+          content: " "; /* 1 */
+          display: table; /* 2 */
+      }
+
+      .cf:after {
+          clear: both;
+      }
+
+      /**
+       * For IE 6/7 only
+       * Include this rule to trigger hasLayout and contain floats.
+       */
+      .cf {
+          *zoom: 1;
+      }
+
+      /* Social Media Icons */
+      .w3-half > a {
+        text-decoration: none;
+      }
+
+      i.fa {
+        padding-top: .2em;
+        padding-left: .5em;
+        padding-right: .5em;
+        taransition: color 1s;
+      }
+
+      .fa-fire:hover {
+        color: #4a4;
+      }
+
+      .fa-facebook:hover {
+        color: #04a;
+      }
+
+      #profile {  
+        vertical-align: middle; }
+      #kuku {
+        
+        text-align: center;
+        font-size: 60px;
+        font-weight: bold;
+        color: #17202A;
+        font-family: "GreatVibes-Regular";
+      }
+      @font-face {
+        font-family: "GreatVibes-Regular";
+        src: url("fonts/GreatVibes-Regular.ttf");
+      }
+      .abme{
+        font-size: 20px;
+        text-align: center;
+      }
+      .lol{
+        margin-left: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        margin-right: 20px;
+        align-content: center;
+        color: white;
+        transform: translateY(50px);
+      }
+      #color{
+        font-size: 40px;
+        padding-top: 50px;
+      }
+      </style>
+    <!-- End Custom CSS -->
+    <!-- Text Hover -->
+        <style>
+            .hover_effect {
+              font-size: 10px;
+              text-align: center;
+              color: black;
+              transform: translateY(35px);
+              -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+              display: block;
+              width: 100%;
+              padding: 1px;
+              position: relative;
+              z-index: 2;
+              box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              -webkit-box-sizing: border-box;
+              font-size: 4em;
+              font-weight: 400;
+              -webkit-user-select: none;
+              -webkit-touch-callout: none;  
+            }
+            .hover_effect:after {
+              content: "";
+              height: 5px;
+              left: 0;
+              bottom: 20;
+              width: 1px;
+              position: absolute;
+              -webkit-transition: all 1s ease;
+              -moz-transition: all 1s ease;
+              -ms-transition: all 1s ease;
+              -o-transition: all 1s ease;
+              transition: all 1s ease;
+              right: 0;
+              margin: 0 auto;
+            }
+
+            .hover_effect:hover {
+              color: #fff;
+              -webkit-transition: all 1s ease;
+              -moz-transition: all 1s ease;
+              -ms-transition: all 1s ease;
+              -o-transition: all 1s ease;
+              transition: all 1s ease;
+              cursor: pointer;
+            }
+
+            .hover_effect:hover:after, 
+            .hover_effect:focus:after{
+              width: 100%;
+              background-color: #fff;
+            }
+        </style>
+</head>
+ 
+<body>
+ 
+        <!-- Navigation -->
+            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button style="margin-top:20px;" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                      <img src="img/banners/Wiz.png" alt="LOGO" class="img-responsive" width="150px">
+                    </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-collapse-main">
+                    <ul class="nav navbar-nav navbar-right" style="background-color: #f7f7f7; text-align: center;">
+                      <li>
+                            <a href="index.html" class="actives">Home</a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="">Projects<span class="caret"></span></a>
+                             <ul class="dropdown-menu">
+                                    <li><a href="videoprojects.html">Video Projects</a></li>
+                                    <li><a href="graphicprojects.html">Graphic Projects</a></li>
+                                    <li><a href="webprojects.html">Web Projects</a></li>
+                                   <!-- <li><a href="stratergiccommunicationprojects.html">Stragegic Communication</a></li> -->
+                        </li>
+                    </ul>
+                        <li>
+                        
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+                       
+              <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="currentteam.html">Team<span class="caret"></span></a>
+                             <ul class="dropdown-menu">
+                                    <li><a href="currentteam.html">Current Team</a></li>
+                                    <li><a href="aluminiteam.html">Alumni Team</a></li>
+                        </li>
+                    </ul>
+                        <li>
+                            <a href="contacts.html">Contact</a>
+                        </li>                  
+                    
+                        <hr>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+            </nav>
+        <!-- Navigation -->
+        
+
+        <!-- Slideshow container -->
+          <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+              <div class="numbertext"></div>
+              <img src="img/ISURec.jpg" style="width:100%">
+              <div class="text"></div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext"></div>
+              <!--<img src="img/ISUS.jpg" style="width:100%">-->
+			  <img src="img/ISURec.jpg" style="width:100%">
+              <div class="text"></div>
+            </div>
+            
+            <!--<div class="mySlides fade">
+              <div class="numbertext"></div>
+                  <div class="video-container">
+                      <video id="myVideo" width="100%" autoplay loop>
+                          <source src="img/portfolioimages/SmokeandPoly.mp4" type="video/mp4">
+                          <source src="img/portfolioimages/SmokeandPoly.ogv" type="video/ogv">
+                          Your browser does not support the video tag.
+                      </video>
+                   </div>
+              <div class="text"></div>
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext"></div>
+                  <div class="video-container">
+                      <video id="myVideo" width="100%" autoplay loop>
+                          <source src="img/Bubble Motion Graphic for Web 2.mp4" type="video/mp4">
+                          <source src="img/Bubble Motion Graphic for Web 2.ogg" type="video/ogg">
+                          Your browser does not support the video tag.
+                      </video>
+                   </div>
+              <div class="text"></div>
+            </div>-->
+
+              <!-- The dots/circles --
+                  <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span> 
+                    <span class="dot" onclick="currentSlide(2)"></span> 
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                  </div>
+              <!-- The dots/circles -->
+          </div>
+        <!-- Slideshow container -->
+
+        <!-- Use if needed -->
+            <!-- Page Content --
+                <div class="container">
+                <div class="row rowContent">
+                    <div class="col-lg-8 col-xs-8 col-md-8 col-sm-8" style="margin-left: 16%;">
+                        <h2 style="font-weight: bold;">Syc Creations Digital Multimedia & Creative Team</h2>
+                        <p style="text-align: center;">This website is designed, developed, and mastered by the student staff of Syc Creations, an ISU Student Media organization, and all content found herein is conceived and created by these creative students.</p>
+                    </div>
+                </div>
+                </div>
+            <!-- /.container -->
+
+            <!-- First Parallax Image with Logo Text --
+            <p id="kuku">Sarah Hall</p>
+            <!-- 
+              <div class="bgimg-1 w3-opacity w3-display-container">
+                <div class="w3-display-middle" style="white-space:nowrap;">
+                  <h1 class="w3-center w3-padding-xlarge w3-black w3-xlarge w3-wide w3-animate-opacity" id="kuku">Sydney Burner</h1>
+                </div>
+              </div>
+            -->
+            <!--  Profile Picture and Description  --
+            <div class="w3-row" align="center">
+            <div class="w3-col m6 w3-center w3-section">
+              <img src="img/portfoliographics/Sarah 1.png" width="17%" height="17%" id="profile" class="w3-circle" alt="Photo of Me">
+            </div>
+            <!-- Container (About Section) --
+            <div class="w3-content w3-container w3-padding-64" id="about">
+              <h2 class="w3-center">Syc Creations Digital Multimedia & Creative Team</b></h2>
+              <p class="abme"><em>This website is designed, developed, and mastered by the student staff of Syc Creations, an ISU Student Media organization, and all content found herein is conceived and created by these creative students.</p>
+                <!-- Hide this text on small devices -->
+                <div class="w3-col m6 w3-hide-small w3-section">
+                </div>
+                </div>
+            </div>
+          <!-- Container (About Section) -->
+        <!-- Use it if needed -->
+
+        <!-- Second Parallax Image with Portfolio Text -->
+            <div class="bgimg-2 w3-display-container" style="padding-left: 30px;" id="portfolio">
+              <div class="w3-display-middle">
+                <h2 align="center" class="hover_effect"><b>Syc Creations <br>Digital Multimedia & Creative Team</b></h2>
+                <p align="" class="lol">This website is designed, developed, and mastered by the student staff of Syc Creations, an ISU Student Media organization, and all content found herein is conceived and created by these creative students.</p>
+                <p align="" class="lol">Syc Creations is a digital design creative group within Student Media. Syc Creations provides fee-based services to clients on the campus of ISU and throughout the greater Wabash Valley.</p>
+                <p align="" class="lol">From production, to graphic design, web design and development, Syc Creations seeks to be a one-stop shop for your digital creative needs.</p>
+                <p align="" class="lol">Students working for Syc Creations come from diverse majors, including computer science, graphic design, communication, and business.</p>
+                <p align="" class="lol">Our mission at Syc Creations is to provide our clients with clean, precise, skillful, and creative digital products in a timely manner.</p>
+              </div>
+            </div>
+        <!-- Second Parallax Image with Portfolio Text -->
+
+        <!-- Work (Portfolio Section) -->
+            <div class="w3-content w3-container w3-padding-64" id="lulu">
+              <h2 class="w3-center" id="Color" align="center" style="font-size: 50px"><u> What We Do</u></h2>
+              <br>
+            </div>
+
+            <!-- Container -->
+                <style>
+                    .contain {
+                        max-width:960px;
+                        text-align:center;
+                    }
+                    @media only screen and (max-width:620px) {
+                      /* For mobile phones: */
+                      .category, .contain {
+                        width:50%;
+
+                      }
+                    }
+                    .category {
+                        /*transform: translateX(360px);*/
+                       position:relative;
+                       margin-left: 150px;
+                       display: inline-block;
+                       float:center;
+                       padding:;  
+                     }
+                       .category img:hover {
+                          /* Start the shake animation and make the animation last for 0.5 seconds */
+                          animation: shake 0.5s; 
+                          /* When the animation is finished, start again */
+                          animation-iteration-count: infinite; 
+                      }
+
+                      @keyframes shake {
+                          0% { transform: translate(1px, 1px) rotate(0deg); }
+                          10% { transform: translate(-1px, -2px) rotate(-1deg); }
+                          20% { transform: translate(-3px, 0px) rotate(1deg); }
+                          30% { transform: translate(3px, 2px) rotate(0deg); }
+                          40% { transform: translate(1px, -1px) rotate(1deg); }
+                          50% { transform: translate(-1px, 2px) rotate(-1deg); }
+                          60% { transform: translate(-3px, 1px) rotate(0deg); }
+                          70% { transform: translate(3px, 1px) rotate(-1deg); }
+                          80% { transform: translate(-1px, -1px) rotate(1deg); }
+                          90% { transform: translate(1px, 2px) rotate(0deg); }
+                          100% { transform: translate(1px, -2px) rotate(-1deg); }
+                      }      
+                    
+                    /*.categoryy {
+
+                       /*transform: translateX(255px);
+                       position:relative;
+                       display: inline-block;
+                       float:left;
+                       padding:20px; 
+                    }*/                    
+                </style>
+                <div class="container">
+                    <div align="center" class="category" id="styl">
+                       <a href="graphicprojects.html" target="_blank"><img src="img/portfolios/Graphic Design Graphic.png"/></a>
+                    </div>
+                    <div align="center" class="category">
+                       <a href="webprojects.html" traget="_blank"><img src="img/portfolios/Web Development Graphic.png" /></a>   
+                    </div>
+                    <div align="center" class="category">
+                       <a href="videoprojects.html" target="_blank"><img src="img/portfolios/Video Production Graphic.png" /></a>  
+                    </div>
+                <!--    <div align="center" class="category">
+                       <a href="stratergiccommunicationprojects.html" target="_blank"><img src="img/portfolios/Strategic Communication Graphic.png" /></a>  
+                    </div> -->
+                </div>                
+            <!-- End Container -->
+        <!-- Work -->
+
+        <!-- Third Parallax Image with Portfolio Text -->
+            <div class="bgimg-3 w3-display-container" id="contact">
+              <div class="w3-display-middle">
+                <h2 class="lol" align="center" id="color"><u>Achievements</u></h2>
+                <p align="center" class="lol">&bigstar; Career Center's Most Outstanding Team (2014-15, 2015-16, and 2017-18)</b></p>
+                <p align="center" class="lol">&bigstar; First and Third place in "Indiana Association of School Broadcasters" Television Spot Production</p>
+              </div>
+            </div>
+        <!-- Third Parallax Image with Portfolio Text -->
+
+    <!-- Footer -->
+        <div class="container-fluid">
+        <footer>
+            <div class="row rowFooter">
+                <div class="col-lg-8 col-md-8 col-sm-8 fMid pull-right">
+                    <p>329 Dreiser Hall<br/>
+                    Indiana State University</br>
+                    Terre Haute, Indiana 47809</br>
+                    Office: 812-237-3252</br>
+                    Email: <a href="mailto:Jeff.Larson@indstate.edu">Jeff.Larson@indstate.edu</a></p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 fLogo">
+          <div class="logos">
+            <a href="https://www.facebook.com/ISUSycCreations" target="_blank"><i class="fa fa-facebook-square fa-3x"></i></a>
+          </div>
+          <div class="logos">
+            <a href="https://twitter.com/syccreations" target="_blank"><i class="fa fa-twitter fa-3x"></i></a>
+          </div>
+          <div class="logos">
+            <a href="https://www.instagram.com/syccreations" target="_blank"><i class="fa fa-instagram fa-3x"></i></a>
+          </div>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+        </div>
+    <!-- Footer -->
+ 
+    <!-- jQuery -->
+        <script src="js/jquery.js"></script>
+ 
+        <!-- Custom -->
+        <script src="js/custom.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+
+        <!-- Slideshow JS -->
+            <script>
+                var slideIndex = 0;
+                showSlides();
+
+                function showSlides() {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("dot");
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none"; 
+                    }
+                    slideIndex++;
+                    if (slideIndex > slides.length) {slideIndex = 1} 
+                    slides[slideIndex-1].style.display = "block"; 
+                    setTimeout(showSlides, 6000); // Change image every 6 seconds
+                }
+
+                /*for (i = 0; i < dots.length; i++) {
+                      dots[i].className = dots[i].className.replace(" active", "");
+                  }*/
+            </script>
+        <!-- Slideshow JS -->
+
+        <!--Custom JS -->
+            <script>
+              // Smooth Scroll on anchor links
+              (function() {
+
+                 'use strict';
+
+                // Feature Test
+                if ( 'querySelector' in document && 'addEventListener' in window && Array.prototype.forEach ) {
+
+                    // Function to animate the scroll
+                    var smoothScroll = function (anchor, duration) {
+
+                        // Calculate how far and how fast to scroll
+                        var startLocation = window.pageYOffset;
+                        var endLocation = anchor.offsetTop;
+                        var distance = endLocation - startLocation;
+                        var increments = distance/(duration/16);
+                        var stopAnimation;
+
+                        // Scroll the page by an increment, and check if it's time to stop
+                        var animateScroll = function () {
+                            window.scrollBy(0, increments);
+                            stopAnimation();
+                        };
+
+                        // If scrolling down
+                        if ( increments >= 0 ) {
+                            // Stop animation when you reach the anchor OR the bottom of the page
+                            stopAnimation = function () {
+                                var travelled = window.pageYOffset;
+                                if ( (travelled >= (endLocation - increments)) || ((window.innerHeight + travelled) >= document.body.offsetHeight) ) {
+                                    clearInterval(runAnimation);
+                                }
+                            };
+                        }
+                        // If scrolling up
+                        else {
+                            // Stop animation when you reach the anchor OR the top of the page
+                            stopAnimation = function () {
+                                var travelled = window.pageYOffset;
+                                if ( travelled <= (endLocation || 0) ) {
+                                    clearInterval(runAnimation);
+                                }
+                            };
+                        }
+
+                        // Loop the animation function
+                        var runAnimation = setInterval(animateScroll, 16);
+                   
+                    };
+
+                    // Define smooth scroll links
+                    var scrollToggle = document.querySelectorAll('.scroll');
+
+                    // For each smooth scroll link
+                    [].forEach.call(scrollToggle, function (toggle) {
+
+                        // When the smooth scroll link is clicked
+                        toggle.addEventListener('click', function(e) {
+
+                            // Prevent the default link behavior
+                            e.preventDefault();
+
+                            // Get anchor link and calculate distance from the top
+                            var dataID = toggle.getAttribute('href');
+                            var dataTarget = document.querySelector(dataID);
+                            var dataSpeed = toggle.getAttribute('data-speed');
+
+                            // If the anchor exists
+                            if (dataTarget) {
+                                // Scroll to the anchor
+                                smoothScroll(dataTarget, dataSpeed || 500);
+                            }
+
+                        }, false);
+
+                    });
+
+                }
+
+             })();
+
+              //Smooth Scroll
+              SmoothScroll({
+                // Scrolling Core
+                animationTime    : 400, // [ms]
+                stepSize         : 100, // [px]
+
+                // Acceleration
+                accelerationDelta : 50,  // 50
+                accelerationMax   : 3,   // 3
+
+                // Keyboard Settings
+                keyboardSupport   : true,  // option
+                arrowScroll       : 50,    // [px]
+
+                // Pulse (less tweakable)
+                // ratio of "tail" to "acceleration"
+                pulseAlgorithm   : true,
+                pulseScale       : 4,
+                pulseNormalize   : 1,
+
+                // Other
+                touchpadSupport   : false, // ignore touchpad by default
+                fixedBackground   : true, 
+                excluded          : ''    
+              });
+            </script>  
+        <!--Custom JS -->              
+    <!-- jQuery -->         
+</body>
+ 
+</html>
+ 

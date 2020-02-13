@@ -1,0 +1,817 @@
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+ 
+    <title>Syc Creations</title>
+ 
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+ 
+    <!-- Custom CSS -->
+    <link href="css/full-slider.css" rel="stylesheet">
+
+    <!-- Video Gallery CSS -->
+    <link href="css/videogallery.css" rel="stylesheet">
+ 
+    <!-- HTML5 Shim and Respond.jss IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+ 
+	<script src="https://use.fontawesome.com/dffe4822f3.js"></script>
+ 
+    <!-- FancyBox -->
+    <link rel="stylesheet" href="fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-buttons.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-thumbs.css" type="text/css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/set2.css" />
+    <link rel="stylesheet" type="text/css" href="css/set1.css" />
+ 
+</head>
+<style>
+ 
+ button.accordion {
+    background-color: white;
+    color: blue;
+    cursor: pointer;
+    padding: 10px;
+    width: 50%;
+    border: 2px;
+    border-radius: 25px;
+    text-align: center;
+    outline: none;
+    font-size: 25px;
+    transition: 0.2s;
+    margin: auto;
+    display: block;
+
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: white; 
+}
+
+div.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: royal;
+}
+</style>
+ 
+<body style="overflow-x:hidden">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button style="margin-top: 20px;" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/banners/Wiz.png" alt="LOGO" class="img-responsive" width="150px">
+                </a>
+            </div>
+<!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-collapse-main">
+                    <ul class="nav navbar-nav navbar-right" style="background-color: #f7f7f7; text-align: center;">
+                      <li>
+                            <a href="index.html" class="actives">Home</a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="">Projects<span class="caret"></span></a>
+                             <ul class="dropdown-menu">
+                                    <li><a href="videoprojects.html">Video Projects</a></li>
+                                    <li><a href="graphicprojects.html">Graphic Projects</a></li>
+                                    <li><a href="webprojects.html">Web Projects</a></li>
+                                    
+                        </li>
+                    </ul>
+                        <li>
+                         <li>
+                            <a href="about.html">About</a>
+                        </li>
+                       
+              <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="2017.html">Team<span class="caret"></span></a>
+                             <ul class="dropdown-menu">
+                                    <li><a href="currentteam.html">Current Team</a></li>
+                                    <li><a href="aluminiteam.html">Alumni Team</a></li>
+                        </li>
+                    </ul>
+                        <li>
+                            <a href="contacts.html">Contact</a>
+                        </li>                  
+                    
+                        <hr>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+ <br>
+ 	<!-- Video Container -->
+ 		<style>
+ 		          @font-face {
+            font-family: "Member";
+            src: url(fonts/Member.otf);
+            
+          }
+				.wizard {
+					overflow: hidden;
+				  color: white;
+				  position: relative;
+				  text-align: center;
+				  width: 100%;  
+				  height: 100%;
+				}
+				.wizard video{
+					width: 100%;
+				}
+				  .overlay {
+				    background: rgba(181, 214, 210, 0.5);
+				    display: block;
+				    height: 100%;
+				    position: absolute;
+				    top: 0;
+				    width: 100%;
+				  }
+				  .wizard-content {
+				    left: 50%;
+				    margin: auto;
+				    max-width: 100%;
+				    position: absolute;
+				    top: 25%;
+				    transform: translate(-80%, 10%);
+				  }
+				  .wizard-content h1{
+				  	font-family: "Member";
+				  	font-size: 500%;
+				  }
+				.text {
+				  padding: 3em 0;
+				  width: 100%;
+
+				  .text1 {
+				    margin: auto; 
+				    max-width: 37rem;
+				    padding: 2em;
+				  }
+				}
+				.hover_effect {
+	              -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	              display: block;
+	              width: 100%;
+	              padding: 1px;
+	              position: relative;
+	              z-index: 2;
+	              box-sizing: border-box;
+	              -moz-box-sizing: border-box;
+	              -webkit-box-sizing: border-box;
+	              font-size: 5em;
+	              font-weight: 600;
+	              -webkit-user-select: none;
+	              -webkit-touch-callout: none;  
+	            }
+	            .hover_effect:after {
+	              content: "";
+	              height: 5px;
+	              left: 0;
+	              bottom: 20;
+	              width: 1px;
+	              position: absolute;
+	              -webkit-transition: all 1s ease;
+	              -moz-transition: all 1s ease;
+	              -ms-transition: all 1s ease;
+	              -o-transition: all 1s ease;
+	              transition: all 1s ease;
+	              right: 0;
+	              margin: 0 auto;
+	            }
+
+	            .hover_effect:hover {
+	              color: #fff;
+	              -webkit-transition: all 1s ease;
+	              -moz-transition: all 1s ease;
+	              -ms-transition: all 1s ease;
+	              -o-transition: all 1s ease;
+	              transition: all 1s ease;
+	              cursor: pointer;
+	            }
+
+	            .hover_effect:hover:after, 
+	            .hover_effect:focus:after{
+	              width: 100%;
+	              background-color: #fff;
+	            }
+	            
+ 		</style>
+			<div class="wizard">
+			  <figure class="hero-video clearfix">
+			    <video autoplay="autoplay" muted="muted" preload="auto" poster="">
+			    <source src="img/portfolios/Syc Wizard-Splash Screen.ogg" type="video/ogg">
+			      <source src="img/portfolios/Syc Wizard-Splash Screen.mp4" type="video/mp4">
+			      <p>Sorry, your browser does not support the HTML5 video tag.</p>
+			    </video>
+			  </figure>
+
+			  <div class="overlay"></div>
+
+			  <div class="wizard-content">
+			    <h1 class="meh">Video Production</h1>
+			  </div>
+			</div>
+			<script>
+				$(document).scroll(function(){
+			  var containerTopToPageTop = $('.text').offset().top;
+			  var windowTopToPageTop = $(window).scrollTop();
+			  var windowInnerHeight = window.innerHeight;
+			  var heroLeftOnScreen = containerTopToPageTop - windowTopToPageTop;
+			});
+			</script>
+			<br>
+ 	<!-- Video Container -->
+
+    <!-- Page Content -->
+    <div class="container ProjectsC" style="margin-top: -150px;">
+ 
+        <div class="row rowProjects" style="margin: 100px 0;">
+				<img src="img/videoproductionprojectsbanner.png" class="img-responsive" alt="">
+        </div>
+		
+		<!--11/15/19 sunilbandaru -->
+		
+		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="projs">
+                    <div id="cf">
+                    <h3><b>Multifactor Authentication - Part 1</b></h3>
+                    <a class="fancybox" fancybox-title="CAS Day 2015" data-fancybox-type="iframe" href="https://www.youtube.com/embed/8XiEb_neyuA">
+                    <img class="img-responsive bottom" src="project/projects-img/OIT1.jpg" alt="Image"></a>
+                    <!--<img class="img-responsive top" src="project/projects-img/ARC of Vigo County.jpg" alt="Image"></a>-->
+                    <div style="display: none;">
+                     <h3>Multifactor Authentication - Part 1</h3>
+
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+		
+		
+		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="projs">
+                    <div id="cf">
+                    <h3><b>Department of Multidisciplinary Studies</b></h3>
+                    <a class="fancybox" fancybox-title="CAS Day 2015" data-fancybox-type="iframe" href="https://www.youtube.com/embed/YZhS9bdNRpE">
+                    <img class="img-responsive bottom" src="project/projects-img/Intro1.jpg" alt="Image"></a>
+                    <!--<img class="img-responsive top" src="project/projects-img/ARC of Vigo County.jpg" alt="Image"></a>-->
+                    <div style="display: none;">
+                     <h3>Department of Multidisciplinary Studies</h3>
+
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+			
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="projs">
+                    <div id="cf">
+                    <h3><b>MDS – Advice</b></h3>
+                    <a class="fancybox" fancybox-title="CAS Day 2015" data-fancybox-type="iframe" href="https://www.youtube.com/embed/lpv8Zren8xI">
+                    <img class="img-responsive bottom" src="project/projects-img/Advice1.jpg" alt="Image"></a>
+                    <!--<img class="img-responsive top" src="project/projects-img/ARC of Vigo County.jpg" alt="Image"></a>-->
+                    <div style="display: none;">
+                     <h3>MDS – Advice</h3>
+
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+			
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="projs">
+                    <div id="cf">
+                    <h3><b>MDS – Extra-curricular opportunities</b></h3>
+                    <a class="fancybox" fancybox-title="CAS Day 2015" data-fancybox-type="iframe" href="https://www.youtube.com/embed/fp3P_wIFkng">
+                    <img class="img-responsive bottom" src="project/projects-img/Extra-Curricular1.jpg" alt="Image"></a>
+                    <!--<img class="img-responsive top" src="project/projects-img/ARC of Vigo County.jpg" alt="Image"></a>-->
+                    <div style="display: none;">
+                     <h3>MDS – Extra-curricular opportunities</h3>
+
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+			
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="projs">
+                    <div id="cf">
+                    <h3><b>MDS – Something for everyone</b></h3>
+                    <a class="fancybox" fancybox-title="CAS Day 2015" data-fancybox-type="iframe" href="https://www.youtube.com/embed/-LC95HmSJug">
+                    <img class="img-responsive bottom" src="project/projects-img/Everyone1.jpg" alt="Image"></a>
+                    <!--<img class="img-responsive top" src="project/projects-img/ARC of Vigo County.jpg" alt="Image"></a>-->
+                    <div style="display: none;">
+                     <h3>MDS – Something for everyone</h3>
+
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+			
+				
+		
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="projs">
+                    <div id="cf">
+                    <h3><b>Student Media Promo</b></h3>
+                    <a class="fancybox" fancybox-title="CAS Day 2015" data-fancybox-type="iframe" href="https://www.youtube.com/embed/-V0xyGP7liw">
+                    <img class="img-responsive bottom" src="project/projects-img/Student Media promo1.jpg" alt="Image"></a>
+                    <!--<img class="img-responsive top" src="project/projects-img/ARC of Vigo County.jpg" alt="Image"></a>-->
+                    <div style="display: none;">
+                     <h3>Student Media Promo</h3>
+
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+			
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="projs">
+                    <div id="cf">
+                    <h3><b>Indiana Statesman Promo 2018</b></h3>
+                    <a class="fancybox" fancybox-title="CAS Day 2015" data-fancybox-type="iframe" href="https://www.youtube.com/embed/nL2LtqzQpgM">
+                    <img class="img-responsive bottom" src="project/projects-img/Indiana Statesman1.jpg" alt="Image"></a>
+                    <!--<img class="img-responsive top" src="project/projects-img/ARC of Vigo County.jpg" alt="Image"></a>-->
+                    <div style="display: none;">
+                     <h3>Indiana Statesman Promo 2018</h3>
+
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="projs">
+                    <div id="cf">
+                    <h3><b>ISU Foundation 2018</b></h3>
+                    <a class="fancybox" fancybox-title="CAS Day 2015" data-fancybox-type="iframe" href="https://www.youtube.com/embed/Cy_BaWEWoEo">
+                    <img class="img-responsive bottom" src="project/projects-img/ISU Foundation 20181.jpg" alt="Image"></a>
+                    <!--<img class="img-responsive top" src="project/projects-img/ARC of Vigo County.jpg" alt="Image"></a>-->
+                    <div style="display: none;">
+                     <h3>ISU Foundation 2018</h3>
+
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+			
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="projs">
+                    <div id="cf">
+                    <h3><b>ARC of Vigo County</b></h3>
+                    <a class="fancybox" fancybox-title="CAS Day 2015" data-fancybox-type="iframe" href="https://www.youtube.com/embed/e1soyJh_9JY">
+                    <img class="img-responsive bottom" src="project/projects-img/ARC of Vigo County1.jpg" alt="Image"></a>
+                    <!--<img class="img-responsive top" src="project/projects-img/ARC of Vigo County.jpg" alt="Image"></a>-->
+                    <div style="display: none;">
+                     <h3>ARC of Vigo County</h3>
+
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+			
+			
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="projs">
+                    <div id="cf">
+                    <h3><b>ISU Medallion 2017</b></h3>
+                    <a class="fancybox" fancybox-title="CAS Day 2015" data-fancybox-type="iframe" href="https://www.youtube.com/embed/0yQzHvMvIeE">
+                    <img class="img-responsive bottom" src="project/projects-img/ISU Medallion 20171.jpg" alt="Image"></a>
+                    <!--<img class="img-responsive top" src="project/projects-img/ARC of Vigo County.jpg" alt="Image"></a>-->
+                    <div style="display: none;">
+                     <h3>ISU Medallion 2017</h3>
+
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="projs">
+                    <div id="cf">
+                    <h3><b>Sesquicentennial Celebration</b></h3>
+                    <a class="fancybox" fancybox-title="CAS Day 2015" data-fancybox-type="iframe" href="https://www.youtube.com/embed/LdMyrrtwF5U">
+                    <img class="img-responsive bottom" src="project/projects-img/Sesquicentennial celebration1.jpg" alt="Image"></a>
+                    <!--<img class="img-responsive top" src="project/projects-img/ARC of Vigo County.jpg" alt="Image"></a>-->
+                    <div style="display: none;">
+                     <h3>Sesquicentennial Celebration</h3>
+
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+			
+			<div class="col-xs-12 col-lg-4 col-md-4 col-sm-12">
+                <div class="projs">
+                    <div id="cf">
+                      <h3><b>CAS Montage - Fall 2016</b></h3>
+                    <a class="fancybox" fancybox-title="CAS Day 2015" data-fancybox-type="iframe" href="https://www.youtube.com/embed/Vzn706oqkoM">
+                    <img class="img-responsive bottom" src="project/projects-img/CAS Fall 20161.jpg" alt="Image"></a>
+                    <!--<img class="img-responsive top" src="img/CAS Montage Fall 2016.jpg" alt="Image"></a>-->
+                    <div style="display: none;">
+                     <h3>CAS Montage - Fall 2016</h3>
+                    </div>
+                    </div>
+                </div>
+            </div>
+			
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="projs">
+                    <div id="cf">
+                    <h3><b>WZIS Car Commercial</b></h3>
+                    <a class="fancybox" fancybox-title="CAS Day 2015" data-fancybox-type="iframe" href="https://www.youtube.com/embed/A-1w-iYcr2E">
+                    <img class="img-responsive bottom" src="project/projects-img/WZIS car1.jpg" alt="Image"></a>
+                    <!--<img class="img-responsive top" src="project/projects-img/ARC of Vigo County.jpg" alt="Image"></a>-->
+                    <div style="display: none;">
+                     <h3>WZIS Car Commercial</h3>
+
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+			
+			
+			
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="projs">
+                    <div id="cf">
+                    <h3><b>WZIS - Tune in to 90.7</b></h3>
+                    <a class="fancybox" fancybox-title="CAS Day 2015" data-fancybox-type="iframe" href="https://www.youtube.com/embed/0Bol25Mn7Wg">
+                    <img class="img-responsive bottom" src="project/projects-img/WZIS - Tune In1.jpg" alt="Image"></a>
+                    <!--<img class="img-responsive top" src="project/projects-img/ARC of Vigo County.jpg" alt="Image"></a>-->
+                    <div style="display: none;">
+                     <h3>WZIS - Tune in to 90.7</h3>
+
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+			
+			
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="projs">
+                    <div id="cf">
+                    <h3><b>CAS Day</b></h3>
+                    <a class="fancybox" fancybox-title="CAS Day 2015" data-fancybox-type="iframe" href="https://www.youtube.com/embed/CKO41DIbVO4">
+                    <img class="img-responsive bottom" src="project/projects-img/CAS Day1.jpg" alt="Image2"></a>
+                    <!--<img class="img-responsive top" src="project/projects-img/CAS Day.jpg" alt="Image2">-->
+                    <div style="display: none;">
+                     <h3>CAS Day</h3>
+
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+			
+			
+			<div class="col-xs-12 col-lg-4 col-md-4 col-sm-12">
+                <div class="projs">
+                <div id="cf">
+                   <h3><b>Marion Jackson Trees </b></h3>
+                    <a class="fancybox" fancybox-title="CAS Day 2015" data-fancybox-type="iframe" href="https://www.youtube.com/embed/a54hJO4zDVc">
+                    <img class="img-responsive bottom" src="project/projects-img/Marion Jackson Trees1.jpg" alt="Image2"></a>
+                    <!--<img class="img-responsive top" src="project/projects-img/Marion Jackson Trees.jpg" alt="Image2">-->
+                    </a> <div style="display: none;">
+                     <h3>Marion Jackson Trees </h3>
+
+                        </div>
+                </div>
+                </div>
+				</div>
+        
+			
+			<!--<div class="row">-->
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="projs">
+                <div id="cf">
+                   <h3><b>ISU Medallion 2016</b></h3>
+                  <a class="fancybox" fancybox-title="CAS Day 2015" data-fancybox-type="iframe" href="https://www.youtube.com/embed/StGhhnYjdg8 "> 
+                    <img class="img-responsive bottom" src="project/projects-img/ISU Medallion 20161.jpg" alt="Image3"></a>
+                    <!--<img class="img-responsive top" src="project/projects-img/ISU Medallion 2016.jpg" alt="Image3"></a>-->
+                    <div style="display: none;">
+                    <h3><b>ISU Medallion 2016 </b></h3>
+                        </div>
+                </div>
+                </div>
+            </div>
+			
+			
+			
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="projs">
+                <div id="cf">
+               <h3><b>Linda Castor </b></h3>
+                    <a class="fancybox" fancybox-title="CAS Day 2015" data-fancybox-type="iframe" href="https://www.youtube.com/embed/oAYh4jfSqaw">
+                    <img class="img-responsive bottom" src="project/projects-img/Linda Castorl.jpg" alt="Image"></a>
+                    <!--<img class="img-responsive top" src="project/projects-img/Linda Castor overlay.jpg" alt="Image"></a>-->
+                    <div style="display: none;">
+                     <h3>Linda Castor </h3>
+
+                        </div>
+                </div>
+                </div>
+            </div>
+			
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="projs">
+                    <div id="cf">
+                      <h3><b>ISU Best </b></h3>
+                  <a class="fancybox" fancybox-title="CAS Day 2015" data-fancybox-type="iframe" href="https://www.youtube.com/embed/pbUyCFtp5Os">
+                  <img class="img-responsive bottom" src="project/projects-img/ISU BEST1.jpg" alt="Image3"></a>
+                  <!--<img class="img-responsive top" src="project/projects-img/ISU BEST.jpg" alt="Image3"></a>-->
+                         </a> <div style="display: none;">
+                        <h3><b>ISU Best </b></h3>
+
+                        </div>
+                    
+                    </div>
+                </div>
+				</div>
+			
+			<!--<div class="row">-->
+            <div class="col-xs-12 col-lg-4 col-md-4 col-sm-12">
+                <div class="projs">
+                <div id="cf">
+                     <h3><b>Cunningham Memorial Library</b></h3>
+                    <a class="fancybox" fancybox-title="CAS Day 2015" data-fancybox-type="iframe" href="https://www.youtube.com/embed/ZEHdBxjmtTw">
+                    <img class="img-responsive bottom" src="project/projects-img/Cunningham Memorial Library1.jpg" alt="Image"></a>
+                    <!--<img class="img-responsive top" src="project/projects-img/Cunningham Memorial Library.jpg" alt="Image"></a>-->
+                    <div style="display: none;">
+                     <h3>Cunningham Memorial Library</h3>
+
+                        </div>
+                </div>
+                </div>
+            </div>
+			
+			
+			
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+					<div class="projs">
+					<div id="cf">
+                       <h3><b>Sycamore Athletic Fund</b></h3>
+                    <a class="fancybox" fancybox-title="CAS Day 2015" data-fancybox-type="iframe" href="https://www.youtube.com/embed/1Vs0ScLNGIw">
+                    <img class="img-responsive bottom" src="project/projects-img/Sycamore Athletic Fund1.jpg" alt="Image2"></a>
+                    <!--<img class="img-responsive top" src="project/projects-img/Sycamore Athletic Fund.jpg" alt="Image2">-->
+                    </a> <div style="display: none;">
+                     <h3>Sycamore Athletic Fund</h3>
+
+                        </div>
+                </div>
+                </div>
+            </div>
+			
+			
+			<!--<div class="row">-->
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="projs">
+                <div id="cf">
+                 <h3><b>College of Arts and Sciences</b></h3>
+                  <a class="fancybox" fancybox-title="CAS Day 2015" data-fancybox-type="iframe" href="https://www.youtube.com/embed/oZV_1mJtB5U">
+                  <img class="img-responsive bottom" src="project/projects-img/CAS 1.jpg" alt="Image3"></a>
+                  <!--<img class="img-responsive top" src="img/CAS.jpg" alt="Image3"></a>-->
+                         <div style="display: none;">
+                        <h3><b>CAS</b></h3>
+
+                        </div>
+                </div>
+                </div>
+            </div>
+				   
+				
+        
+        <!--<div class="row">-->
+			<!--<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="projs">
+                <div id="cf">
+                  <h3><b>ISU Staff Council Is Happy</b></h3><br>
+                    <a class="fancybox" fancybox-title="CAS Day 2015" data-fancybox-type="iframe" href="https://www.youtube.com/embed/Hr-n08E5muA">
+                    <img class="img-responsive bottom" src="project/projects-img/Happy Staff1.jpg" alt="Image2"></a>
+                    <!--<img class="img-responsive top" src="project/projects-img/Happy Staff.jpg" alt="Image2">--
+                    <div style="display: none;">
+                     <h3>ISU Staff Council is Happy<br></h3>
+
+                        </div>
+                </div>
+                </div>
+            </div>
+			-->
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="projs">
+                    <div id="cf">
+                    <h3><b>ISU Medallion 2015</b></h3>
+                    <a class="fancybox" fancybox-title="CAS Day 2015" data-fancybox-type="iframe" href="https://www.youtube.com/embed/uiD_m7Is-Hw">
+                    <img class="img-responsive bottom" src="project/projects-img/ISU Medallion 20151.jpg" alt="Image"></a>
+                    <!--<img class="img-responsive top" src="project/projects-img/ISU Medallion 2015.jpg" alt="Image"></a>-->
+                    <div style="display: none;">
+                     <h3>ISU Medallion 2015<br></h3>
+
+                        </div>
+                    
+                    </div>
+                </div>
+        </div>
+            
+        <!--</div>-->
+        
+            
+
+             
+        <div class="col-xs-12 col-lg-4 col-md-4 col-sm-12">
+                <div class="projs">
+                <div id="cf">
+                   <h3><b>Consensual Sex</b></h3>
+                    <a class="fancybox" fancybox-title="CAS Day 2015" data-fancybox-type="iframe" href="https://www.youtube.com/embed/X41AdhHGoBg">
+                    <img class="img-responsive bottom" src="project/projects-img/Consensual Sex1.jpg" alt="Image2"></a>
+                    <!--<img class="img-responsive top" src="project/projects-img/Consensual Sex.jpg" alt="Image2">-->
+                    <div style="display: none;">
+                     <h3>Consensual Sex</h3>
+
+                    </div>
+                </div>
+                </div>
+            </div>
+        
+		
+		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="projs">
+                <div id="cf">
+                   <h3><b>ISU Career Center - Career Fair</b></h3>
+                    <a class="fancybox" fancybox-title="CAS Day 2015" data-fancybox-type="iframe" href="https://www.youtube.com/embed/jg7eSbf21MU">
+                    <img class="img-responsive bottom" src="project/projects-img/Career Center1.jpg" alt="Image2"></a>
+                    <!--<img class="img-responsive top" src="project/projects-img/Career Center.jpg" alt="Image2">-->
+                    <div style="display: none;">
+                     <h3>ISU Career Center - Career Fair</h3>
+
+                        </div>
+                </div>
+                </div>
+            </div>
+        
+		
+		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="projs">
+                    <div id="cf">
+                   <h3><b>ISU Bayh College Happy</b></h3>
+                    <a class="fancybox" fancybox-title="CAS Day 2015" data-fancybox-type="iframe" href="https://www.youtube.com/embed/aEpHuTICrto">
+                    <img class="img-responsive bottom" src="project/projects-img/BAYH Happy1.jpg" alt="Image"></a>
+                    <!--<img class="img-responsive top" src="project/projects-img/BAYH Happy.jpg" alt="Image"></a>-->
+                    <div style="display: none;">
+                     <h3>ISU Bayh College Happy</h3>
+
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+		
+		
+        <!--<div class="row">-->
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="projs">
+                <div id="cf">
+                 <h3><b>Live Life Well</b></h3>
+                  <a class="fancybox" fancybox-title="CAS Day 2015" data-fancybox-type="iframe" href="https://www.youtube.com/embed/JmXYdstLvM4">
+                  <img class="img-responsive bottom" src="project/projects-img/Live Life Well1.jpg" alt="Image3"></a>
+                  <!--<img class="img-responsive top" src="project/projects-img/Live Life Well.jpg" alt="Image3"></a>-->
+                         </a> <div style="display: none;">
+                        <h3><b>Live Life well</b></h3>
+
+                        </div>
+                </div>
+                </div>
+            </div>
+            
+
+   
+              
+        
+
+            
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="projs">
+                    <div id="cf">
+                    <h3><b>Terre Haute Women's Club</b></h3>
+                    <a class="fancybox" fancybox-title="CAS Day 2015" data-fancybox-type="iframe" href="https://www.youtube.com/embed/HuvTmE3nJ2Y">
+                    <img class="img-responsive bottom" src="project/projects-img/Terre Haute Women's Club1.jpg" alt="Image"></a>
+                    <!--<img class="img-responsive top" src="project/projects-img/Terre Haute Women's Club.jpg" alt="Image"></a>-->
+                    <div style="display: none;">
+                     <h3>Terre Haute Women's Club</h3>
+
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+			
+			
+			
+          
+    <!-- /.container -->
+ 
+	<div class="container-fluid">
+        <!-- Footer -->
+        <footer>
+            <div class="row rowFooter">
+                <div class="col-lg-8  col-md-8 col-sm-8 fMid pull-right">
+                    <p>329 Dreiser Hall<br/>
+                    Indiana State University</br>
+                    Terre Haute, Indiana 47809</br>
+                    Office: 812-237-3252</br>
+                    Email: <a href="mailto:Jeff.Larson@indstate.edu">Jeff.Larson@indstate.edu</a></p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 fLogo">
+					<div class="logos">
+						<a href="https://www.facebook.com/ISUSycCreations" target="_blank"><i class="fa fa-facebook-square fa-3x"></i></a>
+					</div>
+					<div class="logos">
+						<a href="https://twitter.com/syccreations" target="_blank"><i class="fa fa-twitter fa-3x"></i></a>
+					</div>
+					<div class="logos">
+						<a href="https://www.instagram.com/syccreations" target="_blank"><i class="fa fa-instagram fa-3x"></i></a>
+					</div>
+                </div>
+            </div>
+                </div>
+            <!-- /.row -->
+        </footer>
+ 
+	</div>
+    <!-- /.container -->
+ 
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+ 
+    <!-- Custom -->
+    <script src="js/custom.js"></script>
+ 
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+ 
+ 
+    <!-- Add mousewheel plugin (this is optional) -->
+    <script type="text/javascript" src="/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+ 
+    <script type="text/javascript" src="/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+    <script type="text/javascript" src="/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+    <script type="text/javascript" src="/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+ 
+ 
+    <!-- Add FancyBox -->
+    <script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js"></script>
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function(){
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        }
+    }   
+</script>
+ 
+</body>
+ 
+</html>
+ 
